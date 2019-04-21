@@ -9,17 +9,17 @@ from shutil import rmtree
 from setuptools import find_namespace_packages, find_packages, setup, Command
 
 # Package meta-data.
-NAME = "hellbox-fontmake"
-DESCRIPTION = "fontmake job for hellbox."
-URL = "http://github.com/hellboxpy/hellbox-fontmake"
-EMAIL = "jack@standard-library.com"
-AUTHOR = "Jack Jennings"
+NAME = "hellbox-{{name}}"
+DESCRIPTION = "{{name}} job for hellbox."
+URL = "http://github.com/{{github_username}}/hellbox-{{name}}"
+EMAIL = "{{email_address}}"
+AUTHOR = "{{author}}"
 REQUIRES_PYTHON = ">=3.6.0"
 VERSION = None
 LICENSE = "MIT"
 
 # What packages are required for this module to be executed?
-REQUIRED = ["hellbox", "fontmake"]
+REQUIRED = ["hellbox"]
 
 # What packages are optional?
 EXTRAS = {
@@ -29,7 +29,6 @@ EXTRAS = {
 CLASSIFIERS = [
     # Trove classifiers
     # Full list: https://pypi.python.org/pypi?%3Aaction=list_classifiers
-    "Development Status :: 3 - Alpha",
     "Environment :: Plugins",
     "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3.6",
