@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "hellbox-{{name}}"
-dynamic = ["version"]
+version = "0.1.0"
 description = "{{name}} job for hellbox."
 readme = "README.md"
 license = {text = "MIT"}
@@ -27,9 +27,6 @@ classifiers = [
 
 [project.urls]
 Homepage = "https://github.com/{{github_username}}/hellbox-{{name}}"
-
-[tool.setuptools.dynamic]
-version = {attr = "hellbox.jobs.{{name}}.__version__.__version__"}
 
 [tool.setuptools.packages.find]
 where = ["src"]
