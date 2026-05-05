@@ -1,17 +1,17 @@
-from hellbox.source_file import SourceFile
+from unittest.mock import MagicMock
+
 from hellbox.jobs.{{name}} import DoSomething
 
 
-class TestDoSomething(object):
+class TestDoSomething:
     def test_init(self):
         assert DoSomething()
 
-    def test_run_without_files(self):
-        assert DoSomething().run([]) == []
+    def test_process(self):
+        file = MagicMock()
+        copy = MagicMock()
+        file.copy.return_value = copy
 
-    def test_run(self):
-        source = SourceFile("./source", "./content")
+        result = DoSomething().process(file)
 
-        result = DoSomething().run([source])
-
-        assert result == [source]
+        assert result is copy

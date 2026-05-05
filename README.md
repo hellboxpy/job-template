@@ -1,26 +1,26 @@
-hellbox-{{name}}
-================
+# hellbox-{{name}}
 
-TODO: A hellbox job that does something.
+A [hellbox](https://github.com/hellboxpy/hellbox) plugin that does something.
 
-Installation
-------------
+## Usage
 
-Using the [hell CLI](https://github.com/hellboxpy/hell#installation):
+```python
+from hellbox import Hellbox
+from hellbox.jobs.{{name}} import DoSomething
 
-```shell
-$ hell install hellbox-{{name}}
+with Hellbox("build") as task:
+    task.read("source/*") >> DoSomething() >> task.write("output")
 ```
 
-Development
------------
+## Installation
 
-```shell
-$ pip install -e .
-$ pytest
+```sh
+pip install hellbox-{{name}}
 ```
 
-Contributing
-------------
+## Development
 
-To come...
+```sh
+uv pip install -e .
+pytest tests
+```
